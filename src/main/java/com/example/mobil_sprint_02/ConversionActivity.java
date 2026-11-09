@@ -27,9 +27,6 @@ import java.util.Locale;
 /** Activity 2: convierte un valor entre dos unidades de la categoria recibida por Intent. */
 public class ConversionActivity extends AppCompatActivity {
 
-    /** Clave del extra del Intent con la categoria (la misma que envia MainActivity). */
-    private static final String EXTRA_CATEGORY = "com.example.mobil_sprint_02.CATEGORY";
-
     private Category category;
 
     private EditText etValue;
@@ -53,8 +50,8 @@ public class ConversionActivity extends AppCompatActivity {
             return insets;
         });
 
-        category = Categories.byKey(getIntent().getStringExtra(EXTRA_CATEGORY));
-        if (category == null) {
+        category = Categories.byKey(getIntent().getStringExtra(MainActivity.EXTRA_CATEGORY));
+        if (category == null) { // no deberia pasar, pero evitamos un crash
             finish();
             return;
         }
@@ -105,6 +102,14 @@ public class ConversionActivity extends AppCompatActivity {
             showMessage(R.string.msg_invalid_value);
             return;
         }
+        if (Double.isNaN(value) || Double.isInfinite(value)) {
+            showMessage(R.string.msg_invalid_value);
+            return;
+        }
+        if (value < 0 && !category.allowsNegative) {
+            showMessage(R.string.msg_negative_value);
+            return;
+        }
 
         // Las posiciones van desplazadas 1 por el elemento guia.
         Unit from = category.units.get(fromPos - 1);
@@ -113,6 +118,7 @@ public class ConversionActivity extends AppCompatActivity {
 
         tvResult.setText(String.format(Locale.getDefault(), "%.2f %s = %.2f %s",
                 value, from.name, result, to.name));
+        showMessage(R.string.msg_success);
     }
 
     private void showMessage(int stringRes) {
