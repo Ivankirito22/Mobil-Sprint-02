@@ -37,7 +37,6 @@
             android:layout_height="48dp" />
     </RelativeLayout>
 
-    <!-- La imagen se asigna desde Java con un Bitmap (setImageBitmap) -->
     <ImageView
         android:id="@+id/ivCategory"
         android:layout_width="0dp"
@@ -46,6 +45,7 @@
         android:layout_marginBottom="24dp"
         android:contentDescription="@string/main_title"
         android:scaleType="fitCenter"
+        android:src="@drawable/cat_default"
         app:layout_constraintBottom_toTopOf="@id/btnOpen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
