@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Multi-Converter</string>
+
+    <!-- Activity 1 -->
+    <string name="main_title">Elige una categoría</string>
+    <string name="open_converter">Abrir conversor</string>
+</resources>
