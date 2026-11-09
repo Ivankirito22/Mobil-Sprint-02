@@ -4,14 +4,7 @@
 
     <!-- Activity 1 -->
     <string name="main_title">Elige una categoría</string>
+    <string name="select_category">Selecciona una categoría…</string>
+    <string name="msg_pick_category">Selecciona una categoría primero</string>
     <string name="open_converter">Abrir conversor</string>
-
-    <!-- Activity 2 -->
-    <string name="title_conversion">Conversor de %1$s</string>
-    <string name="hint_value">Valor a convertir</string>
-    <string name="label_from">De</string>
-    <string name="label_to">A</string>
-    <string name="convert">Convertir</string>
-    <string name="back">Volver a categorías</string>
-    <string name="result_placeholder">El resultado aparecerá aquí</string>
 </resources>
