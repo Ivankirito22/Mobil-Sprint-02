@@ -4,6 +4,7 @@
 
     <!-- Activity 1 -->
     <string name="main_title">Elige una categoría</string>
+    <string name="select_category">Selecciona una categoría…</string>
     <string name="open_converter">Abrir conversor</string>
 
     <!-- Activity 2 -->
@@ -17,7 +18,10 @@
     <string name="result_placeholder">El resultado aparecerá aquí</string>
 
     <!-- Mensajes (Snackbar) -->
+    <string name="msg_pick_category">Selecciona una categoría primero</string>
     <string name="msg_pick_units">Selecciona la unidad de origen y la de destino</string>
     <string name="msg_empty_value">Introduce un valor</string>
     <string name="msg_invalid_value">El valor introducido no es válido</string>
+    <string name="msg_negative_value">No se permiten valores negativos en esta categoría</string>
+    <string name="msg_success">Conversión realizada</string>
 </resources>
